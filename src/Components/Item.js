@@ -15,9 +15,9 @@ const [temp,setTemp]=useState(null)
 const [country,setCountry]=useState("india")
   const fetchdata=async()=>{
    
-    setCountry(props.country)
+   // setCountry(props.country)
     alert(country)
-    let url=`https://api.weatherapi.com/v1/current.json?key=7cd13524b1e548e9a50165506232803&q=${country}&aqi=no`;
+    let url=`https://api.weatherapi.com/v1/current.json?key=7cd13524b1e548e9a50165506232803&q=${props.country}&aqi=no`;
     let data=await fetch(url);
     let parsedData=await data.json();
     console.log(parsedData)
